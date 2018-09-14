@@ -547,14 +547,61 @@ PagSeguroLightbox({
 **Request Body**  
 ```JSON
 {
-
+   "id":2401269,
+   "sectorName":"PISTA",
+   "categoryName":"PROMOCIONAL",
+   "isAuthorized":false,
+   "authorized":{
+      "name":"Alberto Miranda Dencowski",
+      "email":"allowski@gmail.com",
+      "document":"07990248131",
+      "country":"55"
+   }
 }
 ```
 
 **Response example**  
 ```JSON
 {
-
+   "ok":true,
+   "errCode":1,
+   "validation":{
+      "name":true,
+      "email":true,
+      "document":true,
+      "country":true,
+      "namex":[
+         true,
+         true
+      ],
+      "ok":true
+   },
+   "profile":{
+      "id":8120,
+      "name":"Alberto Miranda Dencowski",
+      "email":"allowski@gmail.com",
+      "cellphone":"4599154785",
+      "document":"321121233213",
+      "zipCode":"85851200",
+      "country":"55",
+      "address":"Rua Bartolomeu de Gusm\u00e3o",
+      "addressNumber":"12344",
+      "city":"Foz do Igua\u00e7u",
+      "complement":"",
+      "state":"PR"
+   },
+   "err":null,
+   "validationA":{
+      "name":false,
+      "email":false,
+      "document":false,
+      "country":true,
+      "namex":[
+         false,
+         false
+      ],
+      "ok":false
+   }
 }
 ```
 
@@ -584,14 +631,36 @@ PagSeguroLightbox({
 **Request Body**  
 ```JSON
 {
-
+   "id":8120,
+   "name":"Alberto Miranda Dencowski",
+   "email":"allowski@gmail.com",
+   "cellphone":"4599154785",
+   "document":"321121233213",
+   "zipCode":"85851200",
+   "country":"55",
+   "address":"Rua Bartolomeu de Gusmão",
+   "addressNumber":"12344",
+   "city":"Foz do Iguaçu",
+   "complement":"",
+   "state":"PR"
 }
 ```
 
 **Response example**  
 ```JSON
 {
-
+   "id":8120,
+   "name":"Alberto Miranda Dencowski",
+   "email":"allowski@gmail.com",
+   "cellphone":"4599154785",
+   "document":"321121233213",
+   "zipCode":"85851200",
+   "country":"55",
+   "address":"Rua Bartolomeu de Gusm\u00e3o",
+   "addressNumber":"12344",
+   "city":"Foz do Igua\u00e7u",
+   "complement":"",
+   "state":"PR"
 }
 ```
 
