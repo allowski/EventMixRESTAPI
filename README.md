@@ -536,4 +536,77 @@ PagSeguroLightbox({
 }
 ```
 
+# Authorize ticket usage
 
+**End-point**: ```/api/public/authorizeTicket```  
+**Method**: ```POST```  
+**Authentication**: ```Token```   
+**Params**: ```RequestBody```  
+**Example Request**:  
+```[GET] https://www.eventmix.com.br/api/public/authorizeTicket```
+**Request Body**  
+```JSON
+{
+
+}
+```
+
+**Response example**  
+```JSON
+{
+
+}
+```
+
+# Get user profile
+**End-point**: ```/api/public/getProfile```  
+**Method**: ```GET```  
+**Authentication**: ```Token```   
+**Params**: ```NONE```  
+**Example Request**:  
+```[GET] https://www.eventmix.com.br/api/public/getProfile```
+
+**Response example**  
+```JSON
+{
+
+}
+```
+
+# Update user profile
+
+**End-point**: ```/api/public/updateUserProfile```  
+**Method**: ```POST```  
+**Authentication**: ```Token```   
+**Params**: ```RequestBody```  
+**Example Request**:  
+```[GET] https://www.eventmix.com.br/api/public/updateUserProfile```
+**Request Body**  
+```JSON
+{
+
+}
+```
+
+**Response example**  
+```JSON
+{
+
+}
+```
+
+# Get static pages
+
+**End-point**: ```/api/public/getPages```  
+**Method**: ```GET```  
+**Authentication**: ```Token```   
+**Params**: ```NONE```  
+**Example Request**:  
+```[GET] https://www.eventmix.com.br/api/public/getPages```
+
+**Response example**  
+```JSON
+{
+
+}
+```
