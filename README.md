@@ -11,12 +11,12 @@ Every request marked as ```Authentication: Token``` on this document must be mad
 # Site Configuration
 **Site Config**: ```/api/public/config```
 **Description**: Returns all the site configuration, like title, colors and so on.
-**Method**: ```GET```
-**Authentication**:```Not required```
-**Params**: ```NONE```
-**Request Example**:
-```[GET] https://www.eventmix.com.br/api/public/config```
-**Response Example**:
+**Method**: ```GET```  
+**Authentication**:```Not required```  
+**Params**: ```NONE```  
+**Request Example**:  
+```[GET] https://www.eventmix.com.br/api/public/config```  
+**Response Example**:  
 ```JSON
 {
     "id": 1,
@@ -55,24 +55,24 @@ Every request marked as ```Authentication: Token``` on this document must be mad
 ```
 
 # User Authentication
-**User authentication**: ```/api/public/login```
-**Description**: Authenticates the user using username/password combination
-**Method**: ```POST```
-**Authentication**: ```NONE```
-**Params**: ```RequestBody```
-**Request Example**:
-```[POST] https://www.eventmix.com.br/api/public/login```
-**Headers:**
-```Content-Type: application/json```
-**RequestBody:**
+**User authentication**: ```/api/public/login```  
+**Description**: Authenticates the user using username/password combination  
+**Method**: ```POST```  
+**Authentication**: ```NONE```  
+**Params**: ```RequestBody```  
+**Request Example**:  
+```[POST] https://www.eventmix.com.br/api/public/login```  
+**Headers:**  
+```Content-Type: application/json```  
+**RequestBody:**  
 ```JSON
 {
     "email": "anonuser@gmail.com",
     "password": "123456"
 }
 ```
-**Response Example**:
-**Success:**
+**Response Example**:  
+**Success:**  
 ```CODE: 200```
 ```JSON
 {
@@ -90,7 +90,7 @@ Every request marked as ```Authentication: Token``` on this document must be mad
     }
 }
 ```
-**Failed**:
+**Failed**:  
 ```CODE 401```
 ```JSON
 {
@@ -102,22 +102,22 @@ Every request marked as ```Authentication: Token``` on this document must be mad
 
 # Check if user email is already registered
 
-**End-point:** ```/api/public/checkIfEmailExists```
-**Description:** Checks if an email is registered or not, also validates the input email
-**Method**: ```POST```
-**Params**: ```RequestBody```
-**Request Example**:
-```[POST]  https://www.eventmix.com.br/api/public/checkIfEmailExists```
-**Headers**:
-```Content-Type: application/json```
-**RequestBody**:
+**End-point:** ```/api/public/checkIfEmailExists```  
+**Description:** Checks if an email is registered or not, also validates the input email  
+**Method**: ```POST```  
+**Params**: ```RequestBody```  
+**Request Example**:  
+```[POST]  https://www.eventmix.com.br/api/public/checkIfEmailExists```  
+**Headers**:  
+```Content-Type: application/json```  
+**RequestBody**:  
 ```JSON
 {
     "email":"anonuser@gmail.com"
 }
 ```
 
-**Response Example (Success)**:
+**Response Example (Success)**:  
 ```JSON
 {
     "id": 8120,
@@ -127,7 +127,7 @@ Every request marked as ```Authentication: Token``` on this document must be mad
 }
 ```
 
-**Response Example (Not found):**
+**Response Example (Not found):**  
 ```JSON
 {
     "id": null,
@@ -139,13 +139,13 @@ Every request marked as ```Authentication: Token``` on this document must be mad
 
 # Register a new user / customer
 
-**End-point**: ```https://www.eventmix.com.br```
-**Description**: Create a new user profile
-**Method:**: ```POST```
-**Params**: ```RequestBody```
-**Request Example**:
-```[POST] https://www.eventmix.com.br/api/public/register```
-**Request Body**:
+**End-point**: ```https://www.eventmix.com.br```  
+**Description**: Create a new user profile  
+**Method:**: ```POST```  
+**Params**: ```RequestBody```  
+**Request Example**:  
+```[POST] https://www.eventmix.com.br/api/public/register```  
+**Request Body**:  
 ```JSON
 {
     "email":"anonuser@gmail.com",
@@ -155,7 +155,7 @@ Every request marked as ```Authentication: Token``` on this document must be mad
     "cellphone": "45991547856"
 }
 ```
-**Response Example (Success)**:
+**Response Example (Success)**:  
 ```CODE 200```
 ```JSON
 {
@@ -165,7 +165,7 @@ Every request marked as ```Authentication: Token``` on this document must be mad
     "err": null
 }
 ```
-**Response Example (Failed)**:
+**Response Example (Failed)**:  
 ```CODE 401```
 ```JSON
 {
@@ -177,14 +177,14 @@ Every request marked as ```Authentication: Token``` on this document must be mad
 
 
 # Event Listing
-**Event List**: ```/api/public/event-list```
-**Description**: List all the active events, and cities to display in the front-page.
-**Method**: ```GET```
-**Authentication**:```Not required```
-**Params**: ```?q=QueryString```
-**Request Example:**
-```[GET] https://www.eventmix.com.br/api/public/event-list?q=Texto+Para+Busca ```
-**Response Example:**
+**Event List**: ```/api/public/event-list```  
+**Description**: List all the active events, and cities to display in the front-page.  
+**Method**: ```GET```  
+**Authentication**:```Not required```  
+**Params**: ```?q=QueryString```  
+**Request Example:**  
+```[GET] https://www.eventmix.com.br/api/public/event-list?q=Texto+Para+Busca ```  
+**Response Example:**  
 ```JSON
 {
     "q": "",
@@ -242,14 +242,14 @@ Every request marked as ```Authentication: Token``` on this document must be mad
 ```
 
 # Event Page
-**Event Page**: ```/api/public/event-page```
-**Description**: List all the event tickets, points of sale and gives details about the given event id.
-**Method**: ```GET```
-**Authentication**:```Not required```
-**Params**: ```?param1={eventId}```
-**Request Example:**
-```[GET] https://www.eventmix.com.br/api/public/event-page?param1=3040```
-**Response Example:**
+**Event Page**: ```/api/public/event-page```  
+**Description**: List all the event tickets, points of sale and gives details about the given event id.  
+**Method**: ```GET```  
+**Authentication**:```Not required```  
+**Params**: ```?param1={eventId}```  
+**Request Example:**  
+```[GET] https://www.eventmix.com.br/api/public/event-page?param1=3040```  
+**Response Example:**  
 ```JSON
 {
     "err": null,
@@ -351,14 +351,14 @@ Every request marked as ```Authentication: Token``` on this document must be mad
 ```
 # Check out process
 
-**End-point**: ```/api/public/checkout```
-**Description**: Create a new order, and payment entry on pagseguro.
-**Params**: ```RequestBody```
-**Method**: ```POST```
-**Authentication**: ```Token```
-**Request Example**:
-```[POST] https://www.eventmix.com.br/api/public/checkout```
-**Request Body**:
+**End-point**: ```/api/public/checkout```  
+**Description**: Create a new order, and payment entry on pagseguro.  
+**Params**: ```RequestBody```  
+**Method**: ```POST```  
+**Authentication**: ```Token```  
+**Request Example**:  
+```[POST] https://www.eventmix.com.br/api/public/checkout```  
+**Request Body**:  
 ```JSON
 {
    "cart":[
@@ -432,7 +432,7 @@ Every request marked as ```Authentication: Token``` on this document must be mad
 }
 ```
 
-**Response example:**
+**Response example:**  
 ```JSON
 {
    "jwtErr":{
@@ -486,11 +486,11 @@ PagSeguroLightbox({
 ```
 
 # List User Orders
-**End-point**: ```/api/public/orderList```
-**Method**: ```GET```
-**Authentication**: ```Token```
-**Params**: ```NONE```
-**Example Request**:
+**End-point**: ```/api/public/orderList```  
+**Method**: ```GET```  
+**Authentication**: ```Token```  
+**Params**: ```NONE```  
+**Example Request**:  
 ```[GET] https://www.eventmix.com.br/api/public/orderList```
 ```JSON
 {
@@ -509,13 +509,13 @@ PagSeguroLightbox({
 ```
 
 # Get Order Details
-**End-point**: ```/api/public/order```
-**Method**: ```GET```
-**Authentication**: ```Token```
-**Params**: ```?param1={orderId}```
-**Example Request**:
-```[GET] https://www.eventmix.com.br/api/public/order?param1=1935691```
-**Response Example**
+**End-point**: ```/api/public/order```  
+**Method**: ```GET```  
+**Authentication**: ```Token```   
+**Params**: ```?param1={orderId}```  
+**Example Request**:  
+```[GET] https://www.eventmix.com.br/api/public/order?param1=1935691```  
+**Response Example**  
 ```JSON
 {
    "id":"1935691",
@@ -535,4 +535,5 @@ PagSeguroLightbox({
    ]
 }
 ```
+
 
